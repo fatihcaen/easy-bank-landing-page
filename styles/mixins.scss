@@ -1,0 +1,96 @@
+@use 'colors';
+
+@mixin absolute {
+  position: absolute;
+}
+
+@mixin align-center {
+  text-align: center;
+}
+
+@mixin align-left {
+  text-align: left;
+}
+
+@mixin background-gradient {
+  background: colors.$button-gradient;
+}
+
+@mixin border-none {
+  border: none;
+}
+
+@mixin flex-row-center-center {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row-evenly-center {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@mixin flex-row-start-center {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-column-center-start {
+  display: flex;
+  flex: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin flex-column-start-center {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin font-size-09rem {
+  font-size: 0.9rem;
+}
+
+@mixin height-auto {
+  height: auto;
+}
+
+@mixin margin-zero {
+  margin: 0;
+}
+
+@mixin padding-zero {
+  padding: 0;
+}
+
+@mixin order-1 {
+  order: 1;
+}
+
+@mixin text-color-dark-blue {
+  color: colors.$dark-blue;
+}
+
+@mixin text-color-grayish-blue {
+  color: colors.$grayish-blue;
+}
+
+@mixin text-color-white {
+  color: colors.$white;
+}
+
+@mixin top-zero {
+  top: 0;
+}
+
+@mixin width-100 {
+  width: 100%;
+}

@@ -1,0 +1,192 @@
+@use 'colors';
+@import "mixins";
+
+// Font
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+$font: "Public Sans", sans-serif;
+
+//Main
+
+body {
+  font-family: $font;
+  overflow-x: hidden;
+}
+
+.navbar {
+  z-index: 1;
+  justify-content: space-around;
+
+  .navbar-toggler {
+    @include border-none;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 0.8rem;
+        transition: color 0.4s ease;
+
+        &:hover {
+          @include text-color-dark-blue;
+          .hover {
+            visibility: visible;
+          }
+        }
+      }
+
+      .hover {
+        position: relative;
+        top: 1.313rem;
+        padding-bottom: 0.2rem;
+        @include background-gradient;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .request-button {
+    button {
+      padding: 0.6rem 1.7rem;
+      @include text-color-white;
+      @include border-none;
+      border-radius: 1.5rem;
+      @include background-gradient;
+      font-size: 0.75rem;
+      transition: filter 0.4s ease;
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+  }
+}
+
+.intro {
+  background-color: colors.$very-light-gray;
+
+  .left {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      margin-bottom: 1rem;
+
+      h1 {
+        @include text-color-dark-blue;
+      }
+    }
+
+    .text {
+      margin-bottom: 1rem;
+      p {
+        color: colors.$grayish-blue;
+      }
+    }
+
+    .request-button {
+      button {
+        padding: 0.8rem 2rem;
+        @include text-color-white;
+        @include border-none;
+        border-radius: 1.5rem;
+        @include background-gradient;
+        font-size: 0.8rem;
+        transition: filter 0.4s ease;
+
+        &:hover {
+          filter: brightness(115%);
+        }
+      }
+    }
+  }
+
+  .bg-intro {
+    position: relative;
+    top: -13rem;
+    right: -18rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.article-big-title {
+  margin-bottom: 1.5rem;
+  .title {
+    h2 {
+      @include align-center;
+      @include text-color-dark-blue;
+    }
+  }
+}
+
+.articles {
+  .article-card {
+    .title {
+      h6 {
+        transition: color 0.4s ease;
+      }
+
+      h6:hover {
+        color: colors.$lime-green;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+footer {
+  .footer-left {
+    .links {
+      .link {
+        transition: color 0.4s ease;
+      }
+      .link:hover {
+        color: colors.$lime-green;
+        cursor: pointer;
+      }
+    }
+
+    .social-logos {
+      i {
+        color: colors.$white;
+        font-size: 1.2rem;
+        transition: color 0.4s ease;
+      }
+
+      i:hover {
+        color: colors.$lime-green;
+      }
+    }
+  }
+
+  .right {
+    .request-button {
+      @include flex-row-center-center;
+      button {
+        padding: 0.6rem 1.7rem;
+        color: colors.$white;
+        border: none;
+        border-radius: 1.5rem;
+        @include background-gradient;
+        font-size: 0.75rem;
+        transition: filter 0.4s ease;
+
+        &:hover {
+          filter: brightness(115%);
+        }
+      }
+    }
+  }
+}
+
+@import "responsive";

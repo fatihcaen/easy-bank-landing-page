@@ -137,6 +137,14 @@ footer .right .request-button button:hover {
   filter: brightness(115%);
 }
 
+.attribution {
+  color: #fff;
+}
+.attribution a {
+  color: #31d35c;
+  font-weight: 400;
+}
+
 @media (min-width: 375px) {
   .navbar {
     justify-content: space-between;

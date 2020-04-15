@@ -189,4 +189,12 @@ footer {
   }
 }
 
+.attribution {
+  color: colors.$white;
+  a {
+    color: colors.$lime-green;
+    font-weight: 400;
+  }
+}
+
 @import "responsive";
